@@ -1,0 +1,31 @@
+{
+   "require": {
+        "php": ">=5.4",
+        "johnpbloch/wordpress": "4.*"
+        
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "repositories": [
+            {
+                "type": "composer",
+                "url": "https://wpackagist.org",
+                "only": [
+                    "wpackagist-plugin/*",
+                    "wpackagist-theme/*"
+                ]
+            }
+        ]
+    
+    },
+ 
+    "scripts": {
+        "permissions": [
+            "sudo chown -R $USER:www-data .",
+            "sudo find . -type f -exec chmod 664 {} +",
+            "sudo find . -type d -exec chmod 775 {} +",
+            "sudo chmod 644 .htaccess"
+        ],
+        "reactivate": "wp plugin deactivate --all && wp plugin activate --all"
+    }
+}

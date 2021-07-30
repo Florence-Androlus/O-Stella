@@ -1,0 +1,212 @@
+  $black: #000000;
+  $white: #ffffff;
+  $darkblue: #041042;
+  $beige: #ebe5dc;
+
+  /* GENERAL STYLES */
+
+
+  #page-planet-container {
+  	box-sizing: border-box;
+  	margin: 0;
+  	padding: 0;
+  	width: 100%;
+  	font-family: "Yusei Magic", sans-serif;
+  	line-height: 1.4;
+  	font-size: clamp(0.8rem, 0.5750rem + 1.0000vw, 1.1rem);
+  	position: relative;
+  	background-color: transparent;
+  	z-index: 1;
+
+  	.main-planet-wrapper {
+  		.title-h1-planet {
+  			height: 5rem;
+  			text-align: center;
+  			vertical-align: middle;
+  			margin: 2rem auto 2rem auto;
+  			font-size: clamp(1.8rem, 1.5231rem + 1.2308vw, 3rem);
+  			color: $white;
+  		}
+
+  		/* Page grid*/
+  		height: auto;
+  		display: grid;
+  		grid-template-columns: 1fr;
+  		grid-template-rows: 1fr;
+  		grid-template-areas: "section";
+
+  		.section-planet {
+  			grid-area: section;
+  			margin: 2rem;
+  		}
+
+  		#section-planet-wrapper {
+  			display: grid;
+  			grid-template-columns: 1fr;
+  			grid-template-rows: repeat(5, auto);
+  			grid-template-areas: "section-title"
+  				"section-form1"
+  				"section-nasa-title"
+  				"section-nasa-image"
+  				"section-comments";
+  		}
+
+  		.section-title {
+  			grid-area: section-title;
+  			grid-row: 1 /span 1;
+  			grid-column: 1 / span 1;
+  		}
+
+  		/* Select */
+  		.planet-form1 {
+  			grid-area: section-form1;
+  			grid-row: 2 / span 1;
+  			grid-column: 1 / span 1;
+  			margin-left: 3rem;
+
+  			label {
+  				color: $white;
+  				display: block;
+  				margin-bottom: 0.5em;
+  				font-size: clamp(1.2rem, 0.9750rem + 1.0000vw, 1.5rem);
+  			}
+
+  			.form-optgroup {
+  				height: 1.6rem;
+  				color: $darkblue;
+  				width: 15rem;
+  				height: 1.8rem;
+  				border-radius: 2rem;
+  				color: $darkblue;
+  				padding: 0 0.5rem 0 0.5rem;
+  				font-size: 1rem;
+  				font-family: "Yusei Magic";
+  				font-weight: bold;
+  				font-size: 1rem;
+  			}
+  		}
+
+  		.nasa-title {
+  			grid-area: section-nasa-title;
+  			grid-row: 3 / span 1;
+  			grid-column: 1 / span 1;
+  			color: #ffffff;
+  		}
+
+  		.nasa-image {
+  			grid-area: section-nasa-image;
+  			grid-row: 4 / span 1;
+  			grid-column: 1 / span 1;
+
+  			iframe {
+				height: 47vh;
+  			}
+  		}
+
+  		/* Comments */
+  		.section-comments {
+  			grid-area: section-comments;
+  			grid-row: 5 / span 1;
+  			grid-column: 1 / span 1;
+  			background-color: $beige;
+  			width: 49vw;
+  			margin: 2rem auto 2rem auto;
+
+  			p {
+  				text-align: justify;
+  				margin: 1rem;
+  			}
+  		}
+
+  		/* Nasa picture of the day - image */
+  		.nasa-img-day {
+  			display: block;
+  			width: 37vw;
+  			margin: auto;
+  		}
+  	}
+
+  	h1 {
+  		text-align: center;
+  	}
+
+  	h2 {
+  		text-align: center;
+  		font-size: clamp(1.1rem, 0.5750rem + 2.3333vw, 1.8rem);
+  	}
+
+  	h3 {
+  		text-align: center;
+  		font-size: clamp(0.8rem, 0.4250rem + 1.6667vw, 1.3rem);
+  	}
+  }
+
+  @media screen and (max-width: 500px) {
+  	#page-planet-container {
+  		.main-planet-wrapper {
+  			.nasa-img-day {
+  				width: 97vw;
+  			}
+
+  			.section-comments {
+  				width: 94vw;
+  			}
+  		}
+  	}
+  }
+
+  @media screen and (max-width: 780px) {
+  	#page-planet-container {
+  		.main-planet-wrapper {
+  			.title-h1-planet {
+  				height: 4rem;
+  				margin: 1.7rem auto 1.7rem auto;
+  			}
+
+  			.planet-form1 {
+  				.form-optgroup {
+  					height: 1.6rem;
+  					color: $darkblue;
+  					font-size: 0.9rem;
+  					width: 15rem;
+  				}
+  			}
+  		}
+  	}
+  }
+
+  @media screen and (max-width: 1300px) {
+  	#page-planet-container {
+  		.main-planet-wrapper {
+  			.title-h1-planet {
+  				height: 5rem;
+  			}
+
+  			.nasa-img-day {
+  				width: 92vw;
+  			}
+
+  			.section-comments {
+  				width: 89vw;
+  			}
+  		}
+  	}
+  }
+
+  @media screen and (max-width: 1450px) {
+  	#page-planet-container {
+  		.main-planet-wrapper {
+  			.planet-form1 {
+  				margin: auto auto 2.5rem auto;
+  			}
+
+  			.nasa-img-day {
+  				width: 72vw;
+  			}
+
+  			.section-comments {
+  				width: 69vw;
+  			}
+  		}
+  	}
+  }

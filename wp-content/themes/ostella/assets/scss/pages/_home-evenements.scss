@@ -1,0 +1,453 @@
+.main-container-eventlist {
+  font-family: "Yusei Magic", sans-serif;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+
+  .moon {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    position: absolute;
+    top: calc(20% - 80px);
+    left: calc(20% - 50px);
+    -webkit-clip-path: circle(50px at center);
+    clip-path: circle(50px, 50px, 50px);
+    clip-path: circle(50px at center);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #B5BCC6;
+    overflow: hidden;
+
+    @media (max-width: 600px) {
+      top: calc(5% - 50px);
+      left: calc(20% - 50px);
+      z-index: -1;
+    }
+
+    &:before {
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      top: -4%;
+      left: -4%;
+      height: 108%;
+      width: 108%;
+      background: #04162E;
+      -moz-box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      -webkit-box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      -moz-animation: before-fullmoon linear 5s infinite;
+      -webkit-animation: before-fullmoon linear 5s infinite;
+      animation: before-fullmoon linear 5s infinite;
+    }
+
+    &:after {
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      top: -4%;
+      left: -4%;
+      height: 108%;
+      width: 108%;
+      background: #B5BCC6;
+      -moz-box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      -webkit-box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      box-shadow: inset -10px 0 7px 0px #B5BCC6;
+      -moz-animation: after-fullmoon linear 5s infinite;
+      -webkit-animation: after-fullmoon linear 5s infinite;
+      animation: after-fullmoon linear 5s infinite;
+    }
+
+    /* Animation moon */
+    @keyframes before-fullmoon {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      50.01%,
+      100% {
+        opacity: 0;
+      }
+
+      0%,
+      24.99% {
+        background: #04162E;
+      }
+
+      25%,
+      100% {
+        background: #B5BCC6;
+      }
+
+      0% {
+        -moz-box-shadow: inset 0px 0 7px 0px #B5BCC6;
+        -webkit-box-shadow: inset 0px 0 7px 0px #B5BCC6;
+        box-shadow: inset 0px 0 7px 0px #B5BCC6;
+      }
+
+      24.99% {
+        -moz-box-shadow: inset 55px 0 7px 0px #B5BCC6;
+        -webkit-box-shadow: inset 55px 0 7px 0px #B5BCC6;
+        box-shadow: inset 55px 0 7px 0px #B5BCC6;
+      }
+
+      25% {
+        -moz-box-shadow: inset 55px 0 7px 0px #04162E;
+        -webkit-box-shadow: inset 55px 0 7px 0px #04162E;
+        box-shadow: inset 55px 0 7px 0px #04162E;
+      }
+
+      50%,
+      100% {
+        -moz-box-shadow: inset 0 0 7px 0px #04162E;
+        -webkit-box-shadow: inset 0 0 7px 0px #04162E;
+        box-shadow: inset 0 0 7px 0px #04162E;
+      }
+
+      0%,
+      50%,
+      100% {
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      20%,
+      30% {
+        -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+        -webkit-border-radius: 10%;
+        border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+      }
+
+      25% {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+      }
+
+      0%,
+      24.99% {
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      25%,
+      50%,
+      100% {
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes after-fullmoon {
+
+      0%,
+      50% {
+        opacity: 0;
+      }
+
+      50.01%,
+      100% {
+        opacity: 1;
+      }
+
+      0%,
+      50%,
+      74.99% {
+        background: #B5BCC6;
+      }
+
+      75%,
+      100% {
+        background: #04162E;
+      }
+
+      0%,
+      50% {
+        -moz-box-shadow: inset 0px 0 7px 0px #04162E;
+        -webkit-box-shadow: inset 0px 0 7px 0px #04162E;
+        box-shadow: inset 0px 0 7px 0px #04162E;
+      }
+
+      74.99% {
+        -moz-box-shadow: inset 55px 0 7px 0px #04162E;
+        -webkit-box-shadow: inset 55px 0 7px 0px #04162E;
+        box-shadow: inset 55px 0 7px 0px #04162E;
+      }
+
+      75% {
+        -moz-box-shadow: inset 55px 0 7px 0px #B5BCC6;
+        -webkit-box-shadow: inset 55px 0 7px 0px #B5BCC6;
+        box-shadow: inset 55px 0 7px 0px #B5BCC6;
+      }
+
+      100% {
+        -moz-box-shadow: inset 0 0 7px 0px #B5BCC6;
+        -webkit-box-shadow: inset 0 0 7px 0px #B5BCC6;
+        box-shadow: inset 0 0 7px 0px #B5BCC6;
+      }
+
+      0%,
+      50%,
+      100% {
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      70%,
+      80% {
+        -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+        -webkit-border-radius: 10%;
+        border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+      }
+
+      75% {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+      }
+
+      0%,
+      50%,
+      74.99% {
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      75%,
+      100% {
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
+  .title-eventlist {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+
+  .event-title-confirm {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #00a98d;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  #eventlist {
+    padding: .3rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .event-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.5rem;
+      padding: .7rem;
+      text-align: center;
+
+      &:hover {
+        color: rosybrown;
+      }
+
+      &:hover {
+        color: rosybrown;
+      }
+    }
+
+    #button-addevent {
+      border-radius: 1rem;
+      width: fit-content;
+      padding: 0.3rem 1rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+
+      &:hover {
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .select-event {
+    border-radius: 2rem;
+    font-family: "Yusei Magic", sans-serif;
+    border-radius: 10px;
+    padding: .2rem;
+    margin-bottom: 1rem;
+    font-family: "Yusei Magic";
+    font-weight: bold;
+    font-size: 1rem;
+
+    option {
+      background: white;
+    }
+  }
+
+  .pagination {
+
+    @media (max-width: 600px) {
+      display: flex;
+
+      #button-single-event {
+        border-radius: 8rem;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+        &:hover {
+          font-weight: bold;
+          color: white;
+        }
+      }
+    }
+
+    #button-single-event {
+      border-radius: 8rem;
+      background-color: transparent;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      padding: .2rem 1.2rem;
+      font-size: 1rem;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button {
+    margin: 1rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: cadetblue;
+    }
+  }
+
+  .article-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .title-eventlist-old {
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 2rem;
+    }
+
+    .description-event {
+      color: white;
+      text-align: center;
+      margin: 1rem 9rem;
+    }
+
+    .nasa-image {
+      height: 20rem;
+      width: 25rem;
+    }
+
+  }
+
+  .pagination {
+    margin-top: 1rem;
+
+    .button {
+      margin: 1rem;
+
+      &:hover {
+        color: cadetblue;
+      }
+    }
+  }
+}
+
+/* si petit écran */
+@media screen and (max-width: 780px) {
+  .main-container-eventlist {
+    font-family: "Yusei Magic", sans-serif;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+
+    .title-eventlist {
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  }
+
+  #eventlist {
+    padding: .3rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:
+      6rem;
+    font-size: 1.3rem;
+
+  }
+
+  .select-event {
+    border-radius: 2rem;
+    font-family: "Yusei Magic", sans-serif;
+    border-radius: 10px;
+    padding: .2rem;
+    margin-bottom: 1rem;
+
+    option {
+      background: white;
+    }
+  }
+
+  .button {
+    //margin: 1rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: cadetblue;
+    }
+  }
+
+  .article-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-eventlist-old {
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 2rem;
+    }
+  }
+}

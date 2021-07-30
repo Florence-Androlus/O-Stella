@@ -1,0 +1,192 @@
+.body-404 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Yusei Magic', sans-serif;
+  background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+#main-404 {
+  height: 50vh;
+}
+
+
+.hr-404 {
+  padding: 10px;
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid white;
+  background: transparent;
+  width: 25%;
+  opacity: .0;
+}
+
+
+.text-404 {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  height: 30vh;
+  margin-top: 2.3rem;
+  padding: 1rem;
+
+  .error-404 {
+    font-size: 1.5rem;
+  }
+
+  .p-404 {
+    font-size: 1.9rem;
+    margin: .5rem;
+  }
+}
+
+.title-404 {
+  font-size: 3.4rem;
+  padding-top: .3rem;
+}
+
+.star404 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  right: 0;
+  animation: starTwinkle 3s infinite linear;
+}
+
+.astronaut img {
+  width: 100px;
+  position: absolute;
+  top: 10%;
+  animation: astronautFly 50s infinite linear;
+}
+
+@media screen and (max-width: 750px) {
+  .title-404 {
+    font-size: 3rem;
+  }
+
+  .text-404 {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+
+    .p-404 {
+      font-size: 1.7rem;
+      margin: .5rem;
+    }
+  }
+
+  .hr-404 {
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    border: 0;
+    border-top: 1px solid white;
+    background: transparent;
+    width: 25%;
+    opacity: .0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .title-404 {
+    font-size: 2.5rem;
+  }
+
+  .text-404 {
+    margin-top: 1.5rem;
+
+    .p-404 {
+      font-size: 1.3rem;
+      margin: .5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .title-404 {
+    font-size: 2rem;
+  }
+
+  .text-404 {
+    padding: 0.7rem;
+
+    .p-404 {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes astronautFly {
+  0% {
+    left: -100px;
+  }
+
+  25% {
+    top: 60%;
+    transform: rotate(30deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+    top: 65%;
+  }
+
+  65% {
+    top: 70%;
+    transform: rotate(30deg);
+  }
+
+  100% {
+    left: 110%;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  25% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  50% {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  75% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* si petit écran */
+@media screen and (max-width: 780px) {
+  .body-404 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yusei Magic', sans-serif;
+    background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 8rem;
+  }
+
+  #main-404 {
+    height: 51vh;
+    margin-top: 9rem;
+  }
+}

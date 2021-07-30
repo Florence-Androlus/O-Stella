@@ -1,0 +1,307 @@
+.main-container-profil {
+    font-family: "Yusei Magic", sans-serif;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+    margin-bottom: 2rem;
+
+    .login-title {
+        font-size: 1.2;
+        text-shadow: 1px 1px #0088A9;
+        color: #0088A9;
+        text-align: center;
+    }
+
+    .profil-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: white;
+        text-align: center;
+        margin: 2rem;
+        text-shadow: 1px 1px #0088A9
+    }
+
+    .central-container-profil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .form-profil {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .input-profil {
+                font-size: 1.5rem;
+                max-width: 300px;
+                margin: .5rem;
+                padding: 0.3rem 0.3rem 0.3rem;
+                background-color: transparent;
+                color: white;
+                box-shadow: 0 1px 1px rgb(57, 100, 155);
+                border: 1px solid rgba(250, 250, 250, 0.5);
+                outline: 0;
+                border-radius: 8px;
+                resize: none;
+
+                &::placeholder {
+                    color: #fff;
+                    font-size: 1.1rem;
+                }
+
+                &:focus {
+                    color: #fff;
+                    border: 1px solid #fff;
+                    background-color: rgba(252, 250, 255, 0.1);
+                    box-shadow: 0 2px 2px #0088A9 !important;
+                }
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: 1px 1px 1px #000;
+                    border: 1px solid #fff;
+                    box-shadow: 0 2px 2px #0088A9 !important;
+                    background-color: rgba(252, 250, 255, 0.1);
+                }
+            }
+
+            #central-profil {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+
+                .left-profil {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: 1rem;
+                }
+
+                .post-profil {
+                    display: grid;
+                    margin-left: 6rem;
+                    font-size: 1.2rem;
+                    margin-bottom: 7rem;
+
+                    h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 3rem;
+                        color: white;
+                        text-align: center;
+                        margin: 2rem;
+                        text-shadow: 1px 1px #0088A9
+                    }
+
+                    .event-link1 {
+                        text-align: center;
+                        padding: .1rem;
+
+                        &:hover {
+                            color: rgb(57, 100, 155);
+                            text-shadow: 1px 1px 1px #000;
+                            border: 0.5px solid rgb(165, 164, 164);
+                            box-shadow: 0 1px 1px #0088A9 !important;
+                            background-color: rgba(252, 250, 255, 0.1);
+
+                        }
+                    }
+                }
+
+
+                #bot-profil {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 180px;
+                    margin-bottom: 2rem;
+                    width: 100%;
+
+                    .text-profil {
+                        border: 1px solid rgba(250, 250, 250, 0.5);
+                        margin-top: 1rem;
+                        width: 100%;
+                        font-size: 1.5rem;
+                        min-height: 132px;
+                        background-color: transparent;
+                        border-width: 2px;
+                        color: white;
+                        border-radius: 8px;
+                        box-shadow: 0 1px 1px rgb(57, 100, 155);
+                        resize: none;
+
+                        &::placeholder {
+                            font-size: 1.1rem;
+                            color: #fff;
+                        }
+
+                        &:focus {
+                            box-shadow: 0 2px 2px #0088A9 !important;
+                            background-color: rgba(252, 250, 255, 0.1);
+                            color: #fff;
+                            border: 1px solid #fff;
+                        }
+
+                        &:hover {
+                            box-shadow: 0 2px 2px #0088A9 !important;
+                            background-color: rgba(252, 250, 255, 0.1);
+                            color: #fff;
+                            border: 1px solid #fff;
+                        }
+                    }
+
+                    .button-profil {
+                        font-weight: bold;
+                        width: fit-content;
+                        padding: 0.3rem 1rem;
+                        font-size: 1.2rem;
+                        margin-top: 1rem;
+                        background: rgb(57, 100, 155);
+                        cursor: pointer;
+                        border-radius: .8rem;
+
+                        &:hover {
+                            box-shadow: 0 1px 1px 1px rgb(161, 202, 226) !important;
+                            background-color: rgb(170, 205, 224);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+
+    .main-container-profil {
+        font-family: "Yusei Magic", sans-serif;
+        position: relative;
+        background-color: transparent;
+        z-index: 1;
+        margin-bottom: 2rem;
+
+        .login-title {
+            font-size: 1.2;
+        }
+
+        .profil-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: white;
+            text-align: center;
+            margin: 2rem;
+            text-shadow: 1px 1px #0088A9
+        }
+
+        .central-container-profil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .form-profil {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .input-profil {
+                    font-size: 1.5rem;
+                    max-width: 300px;
+                    margin: .5rem;
+                    padding: 0.3rem 0.3rem 0.3rem;
+                    background-color: transparent;
+                    color: white;
+                    box-shadow: 0 1px 1px rgb(57, 100, 155);
+                    border: 1px solid rgba(250, 250, 250, 0.5);
+                    outline: 0;
+                    border-radius: 8px;
+                    resize: none;
+
+                    &::placeholder {
+                        color: #fff;
+                        font-size: 1.1rem;
+                    }
+
+                    &:focus {
+                        color: #fff;
+                        border: 1px solid #fff;
+                        background-color: rgba(252, 250, 255, 0.1);
+                        box-shadow: 0 2px 2px #0088A9 !important;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                        text-shadow: 1px 1px 1px #000;
+                        border: 1px solid #fff;
+                        box-shadow: 0 2px 2px #0088A9 !important;
+                        background-color: rgba(252, 250, 255, 0.1);
+                    }
+                }
+
+                #central-profil {
+                    flex-direction: column;
+
+                    .post-profil {
+                        display: grid;
+                        font-size: 1.2rem;
+                        margin-bottom: 5rem;
+                        margin-left: 0;
+                    }
+
+                    #bot-profil {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 180px;
+                        margin-bottom: 2rem;
+
+                        .text-profil {
+                            border: 1px solid rgba(250, 250, 250, 0.5);
+                            margin-top: 1rem;
+                            width: 100%;
+                            font-size: 1.5rem;
+                            min-height: 132px;
+                            background-color: transparent;
+                            border-width: 2px;
+                            color: white;
+                            border-radius: 8px;
+                            box-shadow: 0 1px 1px rgb(57, 100, 155);
+                            resize: none;
+                            font-size: 1.1rem;
+                            width: 350px;
+
+                            &::placeholder {
+                                font-size: 1.1rem;
+                                color: #fff;
+                            }
+
+                            &:focus {
+                                box-shadow: 0 2px 2px #0088A9 !important;
+                                background-color: rgba(252, 250, 255, 0.1);
+                                color: #fff;
+                                border: 1px solid #fff;
+                            }
+
+                            &:hover {
+                                box-shadow: 0 2px 2px #0088A9 !important;
+                                background-color: rgba(252, 250, 255, 0.1);
+                                color: #fff;
+                                border: 1px solid #fff;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

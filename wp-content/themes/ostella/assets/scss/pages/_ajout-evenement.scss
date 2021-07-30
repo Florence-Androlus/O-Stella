@@ -1,0 +1,296 @@
+.main-container-addevent {
+    font-family: "Yusei Magic", sans-serif;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+
+    .event-title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem;
+        text-shadow: 1px 1px rgb(0, 169, 141);
+    }
+
+    .event-title-confirm {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        color: #00a98d;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .central-container-addevent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .form-addevent {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                font-size: 1.5rem;
+                max-width: 300px;
+                margin: .5rem;
+                padding: 0.3rem 0.3rem 0.3rem;
+                background-color: transparent;
+                color: white;
+                box-shadow: 0 1px 1px rgb(0, 169, 141);
+                border: 1px solid rgba(250, 250, 250, 0.5);
+                outline: 0;
+                border-radius: 8px;
+                resize: none;
+
+                &::placeholder {
+                    color: #fff;
+                    font-size: 1.1rem;
+                }
+
+                &:focus {
+                    color: #fff;
+                    border: 1px solid #fff;
+                    background-color: rgba(250, 255, 254, 0.1);
+                    box-shadow: 0 2px 2px rgb(0, 169, 147) !important;
+                }
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: 1px 1px 1px #000;
+                    border: 1px solid #fff;
+                    box-shadow: 0 2px 2px rgb(0, 169, 141) !important;
+                    background-color: rgba(250, 255, 255, 0.1);
+                }
+            }
+
+            button {
+                font-weight: bold;
+                width: fit-content;
+                padding: 0.3rem 1rem;
+                font-size: 1.2rem;
+                margin-top: 1rem;
+                background: rgb(0, 169, 141);
+                cursor: pointer;
+                width: 40%;
+                border-radius: .8rem;
+
+                &:hover {
+                    box-shadow: 0 1px 1px 1px rgb(131, 206, 206) !important;
+                    background-color: rgb(170, 222, 224);
+                }
+            }
+
+            #central-addevent {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 100%;
+                max-width: 1000px;
+                align-items: center;
+
+                .left-addevent {
+                    display: flex;
+                    flex-direction: column;
+
+                    .form-error-wrapper1 {
+                        margin: 0 0.5rem 0.5rem 0.5rem;
+                    }
+
+                }
+
+                .right-addevent {
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-size: 1.3rem;
+                        text-align: center;
+                    }
+                }
+
+                #event-img {
+                    background-color: transparent;
+
+                    .upload {
+                        margin-top: 1rem;
+                        max-width: 218%;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .form-error-wrapper2 {
+                    margin: 0.5rem;
+                }
+            }
+
+            .select-event-category {
+                margin-top: 1rem;
+                padding: .2rem;
+                border-radius: .5rem;
+                font-family: "Yusei Magic";
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            #bot-event {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 97%;
+                //height: 180px;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
+
+                textarea {
+                    border: 1px solid rgba(250, 250, 250, 0.5);
+                    margin-top: 1rem;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    max-width: 1000px;
+                    min-height: 150px;
+                    background-color: transparent;
+                    border-width: 2px;
+                    color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 1px 1px rgb(0, 169, 141);
+                    resize: none;
+                    font-size: 1.1rem;
+
+                    &::placeholder {
+                        font-size: 1.1rem;
+                        color: #fff;
+                    }
+
+                    &:focus {
+                        box-shadow: 0 2px 2px rgb(0, 169, 141) !important;
+                        background-color: rgba(250, 254, 255, 0.1);
+                        color: #fff;
+                        border: 1px solid #fff;
+                    }
+
+                    &:hover {
+                        box-shadow: 0 2px 2px rgb(0, 169, 141) !important;
+                        background-color: rgba(250, 254, 255, 0.1);
+                        color: #fff;
+                        border: 1px solid #fff;
+                    }
+                }
+
+                #form-error-wrapper {
+                    margin: 0.5rem 0 0.5rem 0;
+                }
+            }
+
+            .checkStyleEvent {
+                font-size: 1rem;
+                color: lightgreen;
+            }
+
+            .exclamationStyleEvent {
+                font-size: 1rem;
+                color: tomato;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-container-addevent {
+
+        .event-title {
+            font-size: 2rem;
+        }
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            font-size: 1.5rem;
+            max-width: 300px;
+            margin: .5rem;
+            padding: 0.3rem 0.3rem 0.3rem;
+            background-color: transparent;
+            color: white;
+            box-shadow: 0 1px 1px rgb(0, 169, 141);
+            border: 1px solid rgba(250, 250, 250, 0.5);
+            outline: 0;
+            border-radius: 8px;
+            resize: none;
+
+            &::placeholder {
+                color: #fff;
+                font-size: 1.1rem;
+            }
+
+            &:focus {
+                color: #fff;
+                border: 1px solid #fff;
+                background-color: rgba(250, 255, 254, 0.1);
+                box-shadow: 0 2px 2px rgb(0, 169, 147) !important;
+            }
+
+            &:hover {
+                color: #fff;
+                text-shadow: 1px 1px 1px #000;
+                border: 1px solid #fff;
+                box-shadow: 0 2px 2px rgb(0, 169, 141) !important;
+                background-color: rgba(250, 255, 255, 0.1);
+            }
+        }
+
+        button {
+            font-weight: bold;
+            width: fit-content;
+            padding: 0.3rem 1rem;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            background: rgb(0, 169, 141);
+            cursor: pointer;
+            width: 40%;
+            border-radius: .8rem;
+
+            &:hover {
+                box-shadow: 0 1px 1px 1px rgb(131, 206, 206) !important;
+                background-color: rgb(170, 222, 224);
+            }
+        }
+
+        #central-addevent {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 1000px;
+            align-items: center;
+
+            .left-addevent {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #event-img {
+                background-color: transparent;
+                font-size: 1rem;
+
+                .upload {
+                    margin-top: 4rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

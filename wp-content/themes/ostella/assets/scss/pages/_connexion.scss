@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+.main-container-login {
+  font-family: "Yusei Magic", sans-serif;
+  margin-top: 15vh;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+
+  .login-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-align: center;
+    margin: 2rem;
+    text-shadow: 1px 1px #0088A9;
+  }
+
+  .login-title-error {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    color: #0088a9;
+    text-align: center;
+    margin: 2rem;
+    text-shadow: 1px 1px #0088A9;
+  }
+
+  .central-container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        font-size: 1.5rem;
+        max-width: 300px;
+        margin: .5rem;
+        padding: 0.3rem 0.3rem 0.3rem;
+        background-color: transparent;
+        color: white;
+        box-shadow: 0 1px 1px rgb(57, 100, 155);
+        border: 1px solid rgba(250, 250, 250, 0.5);
+        outline: 0;
+        border-radius: 8px;
+        resize: none;
+
+        &::placeholder {
+          color: #fff;
+          font-size: 1.1rem;
+        }
+
+        &:focus {
+          color: #fff;
+          border: 1px solid #fff;
+          background-color: rgba(252, 250, 255, 0.1);
+          box-shadow: 0 2px 2px #0088A9 !important;
+        }
+
+        &:hover {
+          color: #fff;
+          text-shadow: 1px 1px 1px #000;
+          border: 1px solid #fff;
+          box-shadow: 0 2px 2px #0088A9 !important;
+          background-color: rgba(252, 250, 255, 0.1);
+        }
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        label {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .champ-login {
+            //display: flex;
+
+            .icon {
+              font-size: 1.5rem;
+              max-width: 300px;
+              margin: .5rem;
+              padding: .3rem;
+              background-color: transparent;
+              color: #fff;
+              box-shadow: 0 1px 1px #39649b;
+              border: 1px solid hsla(0, 0%, 98%, .5);
+              outline: 0;
+              border-radius: 8px;
+              resize: none;
+              transition: all 0.2s;
+
+              &:focus {
+                border-color: #39649b;
+              }
+            }
+
+            .password-icon {
+              display: flex;
+              align-items: flex-end;
+              position: absolute;
+              top: 75%;
+              right: 38px;
+              transform: translateY(-50%);
+              width: 20px;
+              color: #f9f9f9;
+              transition: all 0.2s;
+
+              &:hover {
+                cursor: pointer;
+                color: #39649b;
+              }
+
+              .feather-eye-off {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      #bot-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        height: 180px;
+        margin-bottom: 2rem;
+
+        #button-login {
+          width: fit-content;
+          padding: 0.3rem 1rem;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+          border-radius: .8rem;
+          cursor: pointer;
+          font-weight: bold;
+          color: #fff;
+          background: rgb(57, 100, 155);
+
+          &:hover {
+            box-shadow: 0 1px 1px 1px rgb(161, 202, 226) !important;
+            background-color: rgb(170, 205, 224);
+            color: black;
+          }
+        }
+
+        a {
+          margin-top: 1rem;
+          color: white;
+
+          &:hover {
+            color: rosybrown;
+          }
+        }
+      }
+
+      .checkStyleConnexion {
+        font-size: 1.1rem;
+        color: lightgreen;
+      }
+
+      .exclamationStyleConnexion {
+        font-size: 1.1rem;
+        color: tomato;
+      }
+
+      #form-error-connexion-wrapper {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+
+
+
+/* si petit écran */
+@media screen and (max-width: 780px) {
+  .main-container-login {
+    overflow: hidden;
+    max-height: 64vh;
+    font-family: "Yusei Magic", sans-serif;
+    position: relative;
+
+  }
+
+}

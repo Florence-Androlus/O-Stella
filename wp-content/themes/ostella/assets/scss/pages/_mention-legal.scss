@@ -1,0 +1,117 @@
+.mention-container {
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: clamp(1rem, 0.9299rem + 0.3117vw, 1.3rem);
+  margin: auto;
+  min-height: 83vh;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.mention {
+  background-image: url("./images/saturn.png");
+  background-repeat: no-repeat;
+  background-position: top 13rem left 15%;
+  background-attachment: fixed;
+  background-size: 20%;
+  color: white;
+  margin: 2rem;
+
+  .mention-center {
+    text-align: center;
+    margin: .5rem;
+    padding: 0.3rem 0.3rem 0.3rem;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 1px 1px rgb(57, 100, 155);
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    outline: 0;
+    border-radius: 8px;
+    resize: none;
+
+    &:hover {
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border: 1px solid rgb(58, 56, 58);
+      box-shadow: 0 2px 2px gray !important;
+      background-color: rgba(87, 83, 86, 0.1);
+      border-radius: 70%;
+    }
+
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.8831rem + 0.5195vw, 2.5rem);
+    text-align: center;
+    color: #fff;
+    margin: 3rem auto;
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 1.1597rem + 0.6234vw, 1.9rem);
+    text-align: center;
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border: 1px solid #fff;
+      box-shadow: 0 2px 2px gray !important;
+      background-color: rgba(252, 250, 255, 0.1);
+    }
+  }
+
+  p {
+    text-align: justify;
+    padding: 1rem 3rem;
+    margin: 1rem minmax(1rem, 10rem);
+
+    .strong {
+      &:hover {
+        color: rgb(57, 100, 155);
+      }
+    }
+  }
+}
+
+/* si petit écran */
+@media screen and (max-width: 780px) {
+
+  .mention-container {
+    line-height: 1.4;
+    padding: 0.7rem;
+    margin: auto;
+    min-height: 83vh;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  .mention {
+    background-image: url("./images/saturn.png");
+    background-repeat: no-repeat;
+    background-position: top 30% left 7%;
+    background-size: 15%;
+    color: white;
+    margin: 0 1rem;
+
+
+    h1 {
+      margin: 1rem auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-top: 1rem;
+    }
+
+    p {
+      margin-top: .3rem;
+      padding: 0.8rem;
+    }
+  }
+}
