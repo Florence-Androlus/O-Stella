@@ -29,10 +29,14 @@
                 <div id="form-error-connexion-wrapper">
                     <span id="form-error-connexion" hidden></span>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lc5SVkaAAAAABaYMdboSjv1C_9CrIRyzrlNVIYK" data-theme="dark"></div>
+                <!--<div class="g-recaptcha" data-sitekey="6LehMFEaAAAAAOjv_RPp5e0ivi--shuxQG4KuClY" data-theme="dark"></div>-->
                 <br />
                 <div id="bot-login">
-
+                <div id='recaptcha' class="g-recaptcha"
+                    data-sitekey="6LcrHAkdAAAAALo2hg6T6Q0W3gV9dbGRsAfK_mnp"
+                    data-callback="onSubmit"
+                    data-size="invisible">
+                </div>
                     <button type="submit" id="button-login">Valider</button>
                     <!--<a href="">Mot de passe oublié ?</a> -->
                 </div>

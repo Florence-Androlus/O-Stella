@@ -44,25 +44,26 @@ class Router
                 if (isset($_POST['update_user'])) {
 
                     $user_id = User::update_user();
+    
 
-
-                    if (!is_wp_error($user_id) && $user_id != null) {
+                    if (!is_wp_error($user_id)&& $user_id!=null) {
                         global $error;
                         $error = "Vos modifications ont bien été prises en compte";
                         // si c'est le cas, on réagit en conséquence
                         return get_template_directory() . '/profil.php';
                         exit;
                     }
-                } else if (isset($_POST['delete_user'])) {
+                }
+                else if (isset($_POST['delete_user'])){
 
                     $error = User::delete_user($_POST['delete_user']);
-                    if ($error == true) {
+                    if($error == true){
                         $error = "La suppression du compte a bien été prise en compte";
                     }
                     // si c'est le cas, on réagit en conséquence
                     wp_redirect(add_query_arg('delete_user', $error, get_home_url()));
                 }
-
+  
                 // si c'est le cas, on réagit en conséquence
                 return get_template_directory() . '/profil.php';
             } else if (get_query_var('ostella-page') == 'userregister') {
@@ -113,7 +114,7 @@ class Router
                         if (wp_get_current_user()->roles[0] == "member") {
                             $error = "Votre événement a bien été supprimé.";
                         }
-
+                        
                         //redirige vers page d'evenement
                         return get_template_directory() . '/home.php';
                         exit();
@@ -129,13 +130,13 @@ class Router
                             'post_date',
                             $_POST['event-date'],
                         );
-
+                        
                         global $error;
                         $error = "Votre événement a bien été modifié";
                         if (wp_get_current_user()->roles[0] == "member") {
                             $error = "Votre événement a bien été modifié. Il est en attente de publication";
                         }
-
+                        
                         //redirige vers page d'evenement
                         return get_template_directory() . '/home.php';
                         exit();
@@ -149,7 +150,7 @@ class Router
                         global $error;
                         $error = "L'événement a bien été publié";
 
-
+                        
                         //redirige vers page d'evenement
                         return get_template_directory() . '/home.php';
                         exit();
@@ -181,10 +182,11 @@ class Router
                         if (wp_get_current_user()->roles[0] == "member") {
                             $error = "Votre événement a bien été ajouté. Il est en attente de publication";
                         }
-
+                        
                         //redirige vers page d'evenement
                         return get_template_directory() . '/home.php';
                         exit();
+
                     }
                 }
                 global $ostellaCurrentPost;
@@ -233,7 +235,7 @@ class Router
                     // enregistrer les données de l'utilisateur fournies par $_POST
                     $email      = 'androlus@9online.fr';
                     $subject    = $_POST['subject'];
-                    $message    = 'message de :' . $_POST['email'] . '<br><br>' . $_POST['message'];
+                    $message    = 'message de :' . $_POST['email'] . '<br><br>' . $_POST['message'] ;
                     $headers[]  = 'Content-type: text/html';
                     $headers[]   = "Reply-To: <{$_POST['email']}>";
                     $headers[]  = 'Bcc:' . $_POST['email'];
@@ -272,14 +274,14 @@ class Router
                             // enregistrer les données de l'utilisateur fournies par $_POST
                             $email      = 'androlus@9online.fr';
                             $subject    = $_POST['post_title'];
-                            $message    = $_POST['post_content'] . '<br><br>' . $_POST['post_guid'] . '<br><br>  pour vous desinscrire cliquer sur le lien ' . home_url() . '/newsletter/';
+                            $message    = $_POST['post_content'].'<br><br>'.$_POST['post_guid'].'<br><br>  pour vous desinscrire cliquer sur le lien '.home_url().'/newsletter/';
                             $headers[]  = 'Bcc:' . $useremail->user_email;
                             $headers[]  = 'Content-type: text/html';
                         }
                         global $error;
 
                         $error = wp_mail($email, $subject, $message, $headers);
-
+                        
                         // si c'est le cas, on réagit en conséquence
                         wp_redirect(add_query_arg('newsletter', $error, home_url('/newsletter')));
 

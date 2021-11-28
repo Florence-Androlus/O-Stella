@@ -31,6 +31,11 @@
             <input type="radio" id="desinscription" name="newsletter" value="desinscription">
             <label for="desinscription">Désinscription</label>
         </div>
+        <div id='recaptcha' class="g-recaptcha"
+            data-sitekey="6LcrHAkdAAAAALo2hg6T6Q0W3gV9dbGRsAfK_mnp"
+            data-callback="onSubmit"
+            data-size="invisible">
+        </div>
         <div><button id="button-newsletter-valider" type="submit">Valider</button> </div>
     </form>
 </main>

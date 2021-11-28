@@ -19,6 +19,11 @@ get_header(); ?>
     <div class="half right form-contact">
       <textarea type="text" id="message" name="message" placeholder=" Mon message..." rows="6" maxlength="3000" required></textarea>
     </div>
+    <div id='recaptcha' class="g-recaptcha"
+        data-sitekey="6LcrHAkdAAAAALo2hg6T6Q0W3gV9dbGRsAfK_mnp"
+        data-callback="onSubmit"
+        data-size="invisible">
+    </div>
     <input type="submit" value="Envoyer" class="form-submit">
   </form>
 </main>

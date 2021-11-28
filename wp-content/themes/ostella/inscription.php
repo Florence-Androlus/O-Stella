@@ -34,6 +34,11 @@
                     <input type="checkbox" id="inscription" name="newsletter" value="inscription">
                     <label for="inscription">Inscription à la newsletter</label>
                 </div>
+                <div id='recaptcha' class="g-recaptcha"
+                    data-sitekey="6LcrHAkdAAAAALo2hg6T6Q0W3gV9dbGRsAfK_mnp"
+                    data-callback="onSubmit"
+                    data-size="invisible">
+                </div>
                 <button type="submit" id="buttonSubmit">Confirmer</button>
             </div>
         </form>
