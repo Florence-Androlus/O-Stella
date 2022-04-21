@@ -19,9 +19,11 @@ Back :
 Full Wordpress 
 - Thème personnalisé
 - BDD avec PhpMyAdmin
-- API externe
+- API externe de la NASA
 
-🚀 Déploiement sur AWS EC2 (en ligne / https / domaine).
+🚀 Déploiement sur OVH 
+
+💻en ligne sur https://fan-services.fr/OStella.
 
 ⚠️ Pouvant travailler encore dessus, il pourrait y avoir des bugs.
 
